@@ -26,8 +26,8 @@ Examples of Link types and equality theirself:
 
     ![image](https://user-images.githubusercontent.com/92356291/148546223-6383749b-6e31-473f-a861-81d2aeed9f1c.png)
 ## Then We passed to establishing to Structure.
-
-    ![image](https://user-images.githubusercontent.com/92356291/148546326-66d3a167-cbfa-4865-a52e-54728531dce5.png)
+![image](https://user-images.githubusercontent.com/92356291/148546326-66d3a167-cbfa-4865-a52e-54728531dce5.png)
+    
 
 
     - Controller Package has a ConvertingController.go file. This file provide us When the request come from server, directing to converting from deeplink to Web URL or convert from WebUrl to deeplink.
