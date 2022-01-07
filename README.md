@@ -30,4 +30,18 @@ Examples of Link types and equality theirself:
     ![image](https://user-images.githubusercontent.com/92356291/148546326-66d3a167-cbfa-4865-a52e-54728531dce5.png)
 
 
+    - Controller Package has a ConvertingController.go file. This file provide us When the request come from server, directing to converting from deeplink to Web URL or convert from WebUrl to deeplink.
+    
+    - Converters meet the requests from the Controller and perform the converting operations.
+    
+    - Driver file established for DB connection as we mentioned before.
+    
+    - Object package have a WebUrl and Deeplink files. These files perform parceling and assigning Web Url and Deeplink requests to models.
+    
+    - Repository was created to store inbound and fetched links.
+    
+    - Utils file was created for management of errors.
+    
+    -.env file has stored secret DB informations. 
+    
     
