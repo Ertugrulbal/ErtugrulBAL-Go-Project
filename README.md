@@ -26,7 +26,7 @@ Examples of Link types and equality theirself:
 
     ![image](https://user-images.githubusercontent.com/92356291/148546223-6383749b-6e31-473f-a861-81d2aeed9f1c.png)
 ## Then We passed to establishing to Structure.
-![image](https://user-images.githubusercontent.com/92356291/148546326-66d3a167-cbfa-4865-a52e-54728531dce5.png)
+![image](https://user-images.githubusercontent.com/92356291/148573437-6388dc3d-6f31-47d2-af56-ef9779e4f744.png)
     
 
 
