@@ -7,10 +7,10 @@
 
 
 Examples of Link types and equality theirself:
-1. First style of Link Converting Type ( "Produc"t )
+1. First style of Link Converting Type ( "Product ) If Url has "-p-" text we decided a this link "Product" type.
     - Web URL : "https://www.ecommerce.com/casio/saat-p-1925865?boutiqueId=439892&merchantId=105064"
     - Deep Link : "ec://?Page=Product&ContentId=1925865&CampaignId=439892&MerchantId=105064"
-2. Second style of Link Converting Type ("Search")
+2. Second style of Link Converting Type ("Search"). If Url has "sr?q=" text we decided a this link "Search" type.
     - Web URL : "https://www.ecommerce.com/sr?q=%C3%BCt%C3%BC"
     - Deep Link : "ec://?Page=Search&Query=%C3%BCt%C3%BC"
 3. Third style of Link Converting Type ( "Home") (İf request not equal to "Product" or "Search" we call a "Home")
