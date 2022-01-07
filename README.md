@@ -19,6 +19,15 @@ Examples of Link types and equality theirself:
 
 ##Setup Project Structure
 
-1. First Web Server İnitialized and DB Connection Established.
+1. First  DB Connection Established.
 
     ![image](https://user-images.githubusercontent.com/92356291/148545485-7b2ee9d9-f3e0-4ac3-b6fa-4a76575ca86f.png)
+2. Secondly Web Server Initialized.
+
+    ![image](https://user-images.githubusercontent.com/92356291/148546223-6383749b-6e31-473f-a861-81d2aeed9f1c.png)
+## Then We passed to establishing to Structure.
+
+    ![image](https://user-images.githubusercontent.com/92356291/148546326-66d3a167-cbfa-4865-a52e-54728531dce5.png)
+
+
+    
