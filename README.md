@@ -43,5 +43,36 @@ Examples of Link types and equality theirself:
     - Utils file was created for management of errors.
     
     -.env file has stored secret DB informations. 
-    
+    ## V2- This code were wrote Gin and Gorm Framework
+
+- All of the above principle valid for this style. 
+- Using Frameworks more easy to arrive result.
+
+# We imported a these packages
+
+![image](https://user-images.githubusercontent.com/92356291/148694552-8ec47657-740f-4f51-a3ed-1a3e4703c081.png)
+
+-In this version we showed a simple coding style and arrive a fastly to result.
+-The code has a approximately 200 raw 
+### TEST RESULTS
+- We tested Web URLs and Deeplinks with POSTMAN
+
+1. Web Url convert to Deeplink
+
+    -( Product Style)
+    ![image](https://user-images.githubusercontent.com/92356291/148695697-7a73919b-39bf-434c-beaf-1641f3fbdef2.png)
+    -(Search Style)
+    ![image](https://user-images.githubusercontent.com/92356291/148695743-ff0c5cef-58ad-4158-a190-79fb9428c55a.png)
+    -( Home Style )
+    ![image](https://user-images.githubusercontent.com/92356291/148695768-eb5a71db-7508-46cc-afd9-e249fcf17848.png)
+
+2. Deeplink convert to Web URL
+
+    -( Product Style )
+    ![image](https://user-images.githubusercontent.com/92356291/148695795-c8e69999-ee4e-4a90-9179-c9b99a614e96.png)
+    -(Search Style)
+    ![image](https://user-images.githubusercontent.com/92356291/148695816-b8f0b8c5-10bb-43e0-8964-aa16cfdb6e65.png)
+    -(Other Style )
+    ![image](https://user-images.githubusercontent.com/92356291/148695853-f642d496-1956-4552-8b60-29b32f29b4bf.png)
+
     
