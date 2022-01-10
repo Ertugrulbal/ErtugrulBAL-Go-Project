@@ -9,7 +9,6 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-
 var mappings = map[string]string{
 	"boutiqueId":   "CampaignId",
 	"merchantId":   "MerchantId",
@@ -29,15 +28,11 @@ func main() {
 	router.Run("localhost:8080")
 }
 
-func getAlbums(c *gin.Context) {
-
-}
-
 type url struct {
 	Url string `json:"url" binding:"required"`
 }
 
-func productDetailPage(urlStruct url) string {
+func WebUrlToDeeplink(urlStruct url) string {
 	var url_ string
 	split1 := strings.Split(urlStruct.Url, "-p-")
 	url_ = "ec://?Page=Product&ContentId="
@@ -72,7 +67,7 @@ func productDetailPage(urlStruct url) string {
 	return url_
 }
 
-func productDetailPage_(urlStruct url) string {
+func DeeplinkToWebUrl(urlStruct url) string {
 	var url_ string
 	split1 := strings.Split(urlStruct.Url, "?")
 	url_ = "https://www.ecommerce.com/"
@@ -108,7 +103,7 @@ func productDetailPage_(urlStruct url) string {
 	return url_
 }
 
-func searchAndQuery(urlStruct url) string {
+func searchAndQueryDeeplink(urlStruct url) string {
 	var url_ string
 	split1 := strings.Split(urlStruct.Url, "sr?q=")
 	url_ = "ec://?Page=Search&Query="
@@ -118,7 +113,7 @@ func searchAndQuery(urlStruct url) string {
 	return url_
 }
 
-func searchAndQuery_(urlStruct url) string {
+func searchAndQueryWebUrl(urlStruct url) string {
 	var url_ string
 
 	url_ = urlStruct.Url
@@ -156,11 +151,11 @@ func Converting(c *gin.Context) {
 	}
 
 	if isProductUrl && isWebUrl {
-		url_ = productDetailPage(instance)
+		url_ = WebUrlToDeeplink(instance)
 	}
 
 	if isSearchAndQuery && isWebUrl {
-		url_ = searchAndQuery(instance)
+		url_ = searchAndQueryDeeplink(instance)
 	}
 
 	if !isProductUrl_ && !isSearchAndQuery_ && isDeepLink {
@@ -168,11 +163,11 @@ func Converting(c *gin.Context) {
 	}
 
 	if isProductUrl_ && isDeepLink {
-		url_ = productDetailPage_(instance)
+		url_ = DeeplinkToWebUrl(instance)
 	}
 
 	if isSearchAndQuery_ && isDeepLink {
-		url_ = searchAndQuery_(instance)
+		url_ = searchAndQueryWebUrl(instance)
 	}
 
 	c.IndentedJSON(http.StatusOK, url_)
