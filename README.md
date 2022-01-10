@@ -43,7 +43,7 @@ Examples of Link types and equality theirself:
     - Utils file was created for management of errors.
     
     -.env file has stored secret DB informations. 
-    ## V2- This code were wrote Gin and Gorm Framework
+### V2- This code were wrote Gin and Gorm Framework
 
 - All of the above principle valid for this style. 
 - Using Frameworks more easy to arrive result.
