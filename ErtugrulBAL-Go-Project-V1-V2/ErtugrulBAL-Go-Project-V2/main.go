@@ -134,40 +134,40 @@ func Converting(c *gin.Context) {
 	fmt.Printf("URL to be converted to Deeplink: %v\n", instance.Url)
 
 	isDeepLink, _ := regexp.MatchString("ec://", instance.Url)
-	isProductUrl_, _ := regexp.MatchString("Product&ContentId", instance.Url)
-	isSearchAndQuery_, _ := regexp.MatchString("Search&Query", instance.Url)
+	isProductUrlDeeplink, _ := regexp.MatchString("Product&ContentId", instance.Url)
+	isSearchAndQueryDeeplink, _ := regexp.MatchString("Search&Query", instance.Url)
 
 	isWebUrl, _ := regexp.MatchString("ecommerce.com", instance.Url)
-	isProductUrl, _ := regexp.MatchString("-p-", instance.Url)
-	isSearchAndQuery, _ := regexp.MatchString("sr\\?q=", instance.Url)
+	isProductUrlWebUrl, _ := regexp.MatchString("-p-", instance.Url)
+	isSearchAndQueryWebUrl, _ := regexp.MatchString("sr\\?q=", instance.Url)
 
 	if !isWebUrl && !isDeepLink {
 		c.IndentedJSON(http.StatusBadRequest, "Given URL is neither web url nor deep link!")
 		return
 	}
 
-	if !isProductUrl && !isSearchAndQuery && isWebUrl {
+	if !isProductUrlWebUrl && !isSearchAndQueryWebUrl && isWebUrl {
 		url_ = "ec://?Page=Home"
 	}
 
-	if isProductUrl && isWebUrl {
+	if isProductUrlWebUrl && isWebUrl {
 		url_ = WebUrlToDeeplink(instance)
 	}
 
-	if isSearchAndQuery && isWebUrl {
+	if isSearchAndQueryWebUrl && isWebUrl {
 		url_ = searchAndQueryDeeplink(instance)
 	}
 
-	if !isProductUrl_ && !isSearchAndQuery_ && isDeepLink {
+	if !isProductUrlDeeplink && !isSearchAndQueryDeeplink && isDeepLink {
 		url_ = "https://www.ecommerce.com"
 	}
 
-	if isProductUrl_ && isDeepLink {
+	if isProductUrlDeeplink && isDeepLink {
 		url_ = DeeplinkToWebUrl(instance)
 	}
 
-	if isSearchAndQuery_ && isDeepLink {
-		url_ = searchAndQueryWebUrl(instance)
+	if isSearchAndQueryDeeplink && isDeepLink {
+		url_ = searchAndQueryDeeplink(instance)
 	}
 
 	c.IndentedJSON(http.StatusOK, url_)
