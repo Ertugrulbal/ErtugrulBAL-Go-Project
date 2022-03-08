@@ -3,7 +3,7 @@
 
 -This Project aims to convert to links each other which Web Urls to Deeplinks and Deeplinks to Web Urls 
 
--We have two types Link.
+-We have two types of links.
 
 
 Examples of Link types and equality theirself:
